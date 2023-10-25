@@ -1,0 +1,38 @@
+﻿@page "/fetchdata"
+@using RwaWebModels.ConcertContext;
+@inject HttpClient Http
+
+<PageTitle>Concerts</PageTitle>
+
+<h1>Concerts</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (concertList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <DataGrid TItem="Concert"
+              Data="@concertList"
+              ReadData="@OnReadData"
+              TotalItems="@totalItems"
+              PageSize="10"
+            Responsive
+            Filterable>
+        <DataGridCommandColumn />
+        <DataGridColumn Field="@nameof(Concert.Id)" Caption="#" />
+        <DataGridColumn Field="@nameof(Concert.IsVisible)" Caption="Visible" Editable/>
+        <DataGridColumn Field="@nameof(Concert.Title)" Caption="Title" Editable />
+        <DataGridColumn Field="@nameof(Concert.Artist)" Caption="Artist" Editable />
+        <DataGridColumn Field="@nameof(Concert.Description)" Caption="Description" Editable />
+        <DataGridColumn Field="@nameof(Concert.Genre)" Caption="Genre" Editable />
+        <DataGridColumn Field="@nameof(Concert.Price)" Caption="Price" Editable />
+        <DataGridColumn Field="@nameof(Concert.StartTime)" Caption="Start Time" Editable />
+        <DataGridColumn Field="@nameof(Concert.NumberOfTicketsForSale)" Caption="# Tickets For Sale" />
+    </DataGrid>
+
+    <Button Color="Color.Primary" Clicked="@RetryOperation">Reload</Button>
+    <Button Color="Color.Primary" Clicked="@ClearConcerts">Clear</Button>
+}
