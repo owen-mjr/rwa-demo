@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RwaWebModels", "RwaWebModel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RwaWeb", "RwaWeb\RwaWeb.csproj", "{28BCAEF6-EE5B-433B-8A44-D667E230DA95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RwaWebApi.UnitTest", "RwaWebApi.UnitTest\RwaWebApi.UnitTest.csproj", "{09781848-E063-404C-BFE7-35BE1C4DB0EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{28BCAEF6-EE5B-433B-8A44-D667E230DA95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28BCAEF6-EE5B-433B-8A44-D667E230DA95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28BCAEF6-EE5B-433B-8A44-D667E230DA95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09781848-E063-404C-BFE7-35BE1C4DB0EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09781848-E063-404C-BFE7-35BE1C4DB0EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09781848-E063-404C-BFE7-35BE1C4DB0EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09781848-E063-404C-BFE7-35BE1C4DB0EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
